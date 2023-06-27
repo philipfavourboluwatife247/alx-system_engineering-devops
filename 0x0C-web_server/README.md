@@ -1,0 +1,2 @@
+#WEB SERVERS
+This directory contains solution and automated bash scripts for transferring files across servers and client. It entails my attempts of the tasks on servers. This task are runned on an ubunntu terminal.Web-01 server is configured according to requirements and Bash script automatically performs commands to configure an Ubuntu machine to fit requirements (meaning without any human intervention)
