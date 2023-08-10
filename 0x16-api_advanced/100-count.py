@@ -1,25 +1,16 @@
 #!/usr/bin/python3
-"""
-Function that queries the Reddit API and prints
-the top ten hot posts of a subreddit
-"""
-import re
-import requests
-import sys
-
-
-def add_title(dictionary, hot_posts):
+"""                                                        Function that queries the Reddit API and prints
+the top ten hot posts of a subreddit                       """
+import re                                                  import requests                                            import sys
+                                                                                                                      def add_title(dictionary, hot_posts):
     """ Adds item into a list """
     if len(hot_posts) == 0:
         return
 
     title = hot_posts[0]['data']['title'].split()
-    for word in title:
-        for key in dictionary.keys():
+    for word in title:                                             for key in dictionary.keys():
             c = re.compile("^{}$".format(key), re.I)
-            if c.findall(word):
-                dictionary[key] += 1
-    hot_posts.pop(0)
+            if c.findall(word):                                            dictionary[key] += 1                           hot_posts.pop(0)
     add_title(dictionary, hot_posts)
 
 
